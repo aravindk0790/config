@@ -38,7 +38,7 @@ resource "aws_iam_role" "ssm_role" {
 
 ## Configure the automatic remediation for restricted ssh rule
 
-resource "aws_config_remediation_configuration" "this" {
+resource "aws_config_remediation_configuration" "remedy" {
   config_rule_name = aws_config_config_rule.rule.name
   resource_type    = "AWS::EC2::SecurityGroup"
   target_type      = "SSM_DOCUMENT"
